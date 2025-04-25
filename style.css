@@ -54,11 +54,25 @@ section {
     margin: 0 auto;
 }
 
+.intro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #16003a;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
 .section-title {
     font-size: 2em;
     font-weight: 800;
     margin-bottom: 20px;
     color: #16003a;
+    text-align: left;
 }
 
 .subsection-title {
@@ -66,6 +80,7 @@ section {
     font-weight: 800;
     margin-top: 20px;
     color: #16003a;
+    text-align: left;
 }
 
 p {
@@ -77,19 +92,16 @@ p {
 }
 
 button {
+    font-size: 1.1em;
     background-color: #16003a;
     color: white;
-    font-size: 1.1em;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-button:hover {
-    background-color: #4a1c71;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 footer {
@@ -99,20 +111,4 @@ footer {
     font-size: 0.9em;
     color: #16003a;
     margin-top: 40px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.column {
-    flex: 0 0 48%;
-    margin-bottom: 30px;
-}
-
-.column img {
-    max-width: 100%;
-    border-radius: 8px;
 }
