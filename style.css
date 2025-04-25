@@ -9,15 +9,13 @@ body {
 
 header.banner {
     background-image: url('banner.jpg');
-    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 300px;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-size: contain;
+    height: auto;
+    padding: 40px 20px;
     text-align: center;
+    color: white;
 }
 
 header .header-content h1 {
