@@ -84,3 +84,18 @@ footer {
     color: #16003a;
     margin-top: 40px;
 }
+
+button {
+    background-color: #16003a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #4b005e;
+}
