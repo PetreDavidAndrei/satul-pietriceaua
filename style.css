@@ -7,24 +7,30 @@ body {
     color: #16003a;
 }
 
-header {
-    background-color: #f5f5f5;
-    padding: 40px 20px;
+header.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .header-content h1 {
     font-size: 3em;
     margin-bottom: 10px;
     font-weight: 800;
-    color: #16003a;
+    color: white;
 }
 
 header .subtitle {
     font-size: 1.2em;
-    color: #16003a;
     font-weight: 600;
+    color: white;
 }
 
 section {
