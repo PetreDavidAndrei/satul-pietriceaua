@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(255, 255, 255, 0.9); /* temporar: alb semi-transparent */
+    background-color: rgba(255, 255, 255, 0.3); /* temporar: alb semi-transparent */
     color: #16003a;
     position: relative;
     z-index: 1;
