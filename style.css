@@ -76,6 +76,22 @@ p {
     margin-bottom: 20px;
 }
 
+button {
+    background-color: #16003a;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #4a1c71;
+}
+
 footer {
     background-color: #f5f5f5;
     text-align: center;
@@ -85,17 +101,18 @@ footer {
     margin-top: 40px;
 }
 
-button {
-    background-color: #16003a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 20px;
-    display: inline-block;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-button:hover {
-    background-color: #4b005e;
+.column {
+    flex: 0 0 48%;
+    margin-bottom: 30px;
+}
+
+.column img {
+    max-width: 100%;
+    border-radius: 8px;
 }
