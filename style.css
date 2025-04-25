@@ -9,13 +9,14 @@ body {
 
 header.banner {
     background-image: url('banner.jpg');
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    background-size: contain;
-    height: auto;
-    padding: 40px 20px;
+    height: 100vh; /* Înălțime completă a viewport-ului */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: white;
 }
 
 header .header-content h1 {
