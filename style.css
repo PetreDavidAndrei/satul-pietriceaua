@@ -18,6 +18,9 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    /* Acum bannerul va ocupa doar partea de sus a paginii */
+    margin-bottom: 40px; /* Spațiu între banner și restul conținutului */
 }
 
 header .header-content h1 {
