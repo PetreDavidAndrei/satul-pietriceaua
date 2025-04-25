@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;  /* Alb */
-    color: #4a2c92; /* Mov închis */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #16003a;
 }
 
 header {
-    background-color: #f5f5f5; /* Gri deschis */
+    background-color: #f5f5f5;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -15,13 +17,14 @@ header {
 header .header-content h1 {
     font-size: 3em;
     margin-bottom: 10px;
-    font-weight: 600;
-    color: #4a2c92; /* Mov închis */
+    font-weight: 800;
+    color: #16003a;
 }
 
 header .subtitle {
     font-size: 1.2em;
-    color: #555;  /* Gri deschis */
+    color: #555;
+    font-weight: 600;
 }
 
 section {
@@ -32,35 +35,31 @@ section {
 
 .section-title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 20px;
-    color: #4a2c92;  /* Mov închis */
+    color: #16003a;
 }
 
 .subsection-title {
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 800;
     margin-top: 20px;
-    color: #4a2c92; /* Mov închis */
+    color: #16003a;
 }
 
 p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #333;  /* Gri închis pentru text */
+    color: #333;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
-.image-placeholder {
-    text-align: center;
-    margin-top: 40px;
-}
-
 footer {
-    background-color: #f5f5f5; /* Gri deschis */
+    background-color: #f5f5f5;
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-    color: #777;  /* Gri pentru footer */
+    color: #777;
     margin-top: 40px;
 }
