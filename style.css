@@ -1,42 +1,59 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     text-align: center;
     padding: 50px 20px;
-    background-color: #2a2a2a;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 header p {
     font-size: 1.2em;
-    color: #cccccc;
+    color: #777;
 }
 
 .content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 .content h2 {
-    color: #8ecae6;
-    border-bottom: 1px solid #444;
-    padding-bottom: 5px;
+    color: #00796b;
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2a2a2a;
-    color: #aaaaaa;
+    background-color: #ffffff;
+    color: #888;
     font-size: 0.9em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Placeholder for background image */
+body {
+    background-image: url('https://via.placeholder.com/1600x900?text=Tropical+Landscape');
+    background-size: cover;
+    background-position: center;
 }
