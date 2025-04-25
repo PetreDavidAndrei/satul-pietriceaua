@@ -9,16 +9,19 @@ body {
 
 header.banner {
     background-image: url('banner.jpg');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+    background-color: #000; /* fundal de rezervă în cazul în care imaginea nu umple tot */
     height: 300px;
+    width: 100%;
     position: relative;
-    color: white;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
+
 
 header .header-content h1 {
     font-size: 3em;
