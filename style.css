@@ -3,8 +3,10 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9); /* temporar: alb semi-transparent */
     color: #16003a;
+    position: relative;
+    z-index: 1;
 }
 
 header.banner {
@@ -17,10 +19,11 @@ header.banner {
     justify-content: center;
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 header .header-content {
-    z-index: 2;
+    z-index: 3;
 }
 
 header h1 {
@@ -36,11 +39,13 @@ header .subtitle {
     color: white;
 }
 
-/* restul paginii */
 section {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* temporar */
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -72,4 +77,6 @@ footer {
     font-size: 0.9em;
     color: #16003a;
     margin-top: 40px;
+    position: relative;
+    z-index: 1;
 }
