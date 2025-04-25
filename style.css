@@ -1,12 +1,12 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
+    background-color: #ffffff;  /* Alb */
     color: #4a2c92; /* Mov închis */
 }
 
 header {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Gri deschis */
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -16,11 +16,12 @@ header .header-content h1 {
     font-size: 3em;
     margin-bottom: 10px;
     font-weight: 600;
+    color: #4a2c92; /* Mov închis */
 }
 
 header .subtitle {
     font-size: 1.2em;
-    color: #555;
+    color: #555;  /* Gri deschis */
 }
 
 section {
@@ -33,20 +34,20 @@ section {
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #4a2c92;
+    color: #4a2c92;  /* Mov închis */
 }
 
 .subsection-title {
     font-size: 1.5em;
     font-weight: 600;
     margin-top: 20px;
-    color: #4a2c92;
+    color: #4a2c92; /* Mov închis */
 }
 
 p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #333;
+    color: #333;  /* Gri închis pentru text */
     margin-bottom: 20px;
 }
 
@@ -56,10 +57,10 @@ p {
 }
 
 footer {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Gri deschis */
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-    color: #777;
+    color: #777;  /* Gri pentru footer */
     margin-top: 40px;
 }
