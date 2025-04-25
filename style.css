@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
-  color: #3f0a5b;  /* Textul acum este mai deschis: #3f0a5b */
+  color: #16003a;  /* Textul este acum mov */
 }
 
 header {
@@ -38,21 +38,21 @@ h1 {
 }
 
 .container {
-  padding: 0 40px; /* Am adăugat mai mult spațiu la stânga și dreapta pentru text */
+  padding: 20px;
 }
 
 h2, h3 {
   font-weight: 800;
   font-size: 1.5rem;
   margin-top: 20px;
-  color: #3f0a5b;  /* Textul acum este mai deschis */
+  color: #16003a;  /* Textul este acum mov */
 }
 
 p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
-  color: #3f0a5b;  /* Textul acum este mai deschis */
+  color: #16003a;  /* Textul este acum mov */
 }
 
 .attractions, .landscape, .geo {
