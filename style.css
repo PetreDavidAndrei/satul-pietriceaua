@@ -11,8 +11,9 @@ header.banner {
     background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Înălțime completă a viewport-ului */
+    height: 300px;
     position: relative;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
