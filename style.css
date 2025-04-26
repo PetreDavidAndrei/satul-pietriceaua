@@ -3,111 +3,99 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
-    color: #16003a;
+    background: #fff;
+    color: #111;
 }
 
-header.banner {
-    background-image: url('banner.jpg'); /* Asigură-te că ai imaginea corespunzătoare aici */
-    background-size: cover;
-    background-position: center;
-    height: 250px;  /* Dimensiunea header-ului originală */
+.header {
     position: relative;
-    color: white;
+    height: 100vh;
+    background: url('background.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
-header.banner::before {
-    content: "";
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay semi-transparent pentru text mai vizibil */
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-header .header-content {
+.header-content {
+    position: relative;
     z-index: 2;
+    color: #fff;
 }
 
-header .header-content h1 {
-    font-size: 3em;
+.header h1 {
+    font-size: 3rem;
     font-weight: 800;
-    color: white;
-    margin-bottom: 10px;
-}
-
-header .subtitle {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: white;
+    margin: 0;
 }
 
 .arrows {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    transform: translateY(-50%);
-    z-index: 3;
-}
-
-.arrow-left, .arrow-right {
-    font-size: 3em;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.arrow-left:hover, .arrow-right:hover {
-    transform: scale(1.2);
-}
-
-.secondary-headers {
+    align-items: center;
+    width: 100%;
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transform: translateY(-50%);
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
+    padding: 0 30px;
 }
 
-.header-secondary {
-    display: none;
-    text-align: center;
+.arrow {
+    font-size: 4rem;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
 }
 
-.header-secondary.active {
-    display: block;
+.arrow-left {
+    justify-self: flex-start;
 }
 
-.header-secondary h2 {
-    font-size: 2.5em;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 15px;
+.arrow-right {
+    justify-self: flex-end;
 }
 
-.header-secondary p {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: white;
+.section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
 }
 
-/* Stiluri pentru animație */
-header.banner .header-content, .arrows {
-    transition: opacity 0.5s ease;
+.section:nth-child(odd) .section-content {
+    margin-right: auto;
 }
+
+.section:nth-child(even) .section-content {
+    margin-left: auto;
+}
+
+.section-content {
+    max-width: 800px;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding:
