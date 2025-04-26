@@ -1,91 +1,95 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     color: #111;
-    font-weight: 400;
 }
 
 header {
     position: relative;
     height: 100vh;
-    background: url('header-image.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('background.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    color: white;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 20px;
+header .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
 }
 
 header h1 {
     font-size: 4rem;
-    margin-bottom: 10px;
-    color: #fff;
     font-weight: 800;
+    z-index: 1;
 }
 
-.subtitle {
+header .subtitle {
     font-size: 1.2rem;
-    color: #fff;
     font-weight: 400;
+    margin-top: 0.5rem;
+    z-index: 1;
 }
 
-.section {
-    padding: 80px 20px;
+.arrows {
+    position: absolute;
+    bottom: 20px;
     display: flex;
-    justify-content: center;
-    text-align: left;
-    background-color: #fff;
+    gap: 1rem;
+    z-index: 1;
 }
 
-.section:nth-child(odd) {
-    background-color: #f0f0f0;
-}
-
-.content {
-    max-width: 800px;
-}
-
-h2 {
+.arrow {
     font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
 }
 
-p {
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+section p {
     font-size: 1.1rem;
-    line-height: 1.7;
     font-weight: 500;
+    line-height: 1.8;
 }
 
 .button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #0066cc;
-    color: #fff;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-weight: 800;
-    text-transform: uppercase;
+    color: white;
+    background-color: #0056b3;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #004999;
+    background-color: #003d80;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #111;
-    color: #bbb;
+    color: white;
+    text-align: center;
+    padding: 1rem;
     font-size: 0.9rem;
+    margin-top: 2rem;
 }
