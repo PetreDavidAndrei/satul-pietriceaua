@@ -17,7 +17,7 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-image 1s ease-in-out, transform 1s ease;
+    overflow: hidden;
 }
 
 
@@ -55,7 +55,7 @@ header .subtitle {
 header .arrow {
     position: absolute;
     top: 50%;
-    font-size: 6em; /* Săgețile mai mari */
+    font-size: 6em;
     color: white;
     cursor: pointer;
     z-index: 3;
@@ -72,11 +72,16 @@ header .arrow {
 }
 
 .arrow:hover {
-    transform: translateY(-50%) scale(1.2); /* Mărire la hover */
+    transform: translateY(-50%) scale(1.2);
+}
+
+.header-content {
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    will-change: transform, opacity;
 }
 
 header.banner.initial {
-    background-image: url('banner1.jpg'); /* Imaginea care se va arăta la început */
+    background-image: url('banner1.jpg');
 }
 .container {
     margin: 0 auto;
