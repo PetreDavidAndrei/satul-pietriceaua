@@ -3,17 +3,17 @@ const headers = [
     {
         title: "Pietriceaua",
         subtitle: "Un sat pitoresc în inima comunei Brebu, perfect pentru relaxare și explorare",
-        image: "banner.jpg",  // Placeholder, va fi schimbat când adaugi imagini
+        image: "banner.jpg",  // Imagine pentru primul header
     },
     {
         title: "Despre Satul Pietriceaua",
         subtitle: "Informații suplimentare despre istoria satului, locuri de interes și atracții",
-        image: "banner2.jpg",  // Placeholder, va fi schimbat când adaugi imagini
+        image: "banner2.jpg",  // Imagine pentru al doilea header
     },
     {
         title: "Găsește-ți Rădăcinile",
         subtitle: "Explorând tradițiile și cultura Pietriceaua",
-        image: "banner3.jpg",  // Placeholder, va fi schimbat când adaugi imagini
+        image: "banner3.jpg",  // Imagine pentru al treilea header
     },
 ];
 
