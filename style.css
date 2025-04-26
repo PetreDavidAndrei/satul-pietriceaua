@@ -18,6 +18,7 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden; /* Important pentru a menține doar un header vizibil */
 }
 
 header.banner::before {
@@ -48,7 +49,7 @@ header .subtitle {
     color: white;
 }
 
-header .arrow-left, header .arrow-right {
+header .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -56,14 +57,38 @@ header .arrow-left, header .arrow-right {
     color: white;
     cursor: pointer;
     z-index: 3;
+    user-select: none;
+    transition: transform 0.3s;
 }
 
 header .arrow-left {
-    left: 10px;
+    left: 20px;
 }
 
 header .arrow-right {
-    right: 10px;
+    right: 20px;
+}
+
+header .arrow:hover {
+    transform: scale(1.2);
+}
+
+header .secondary-header {
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+header .active {
+    display: block;
+    transform: translateX(0);
+}
+
+header .move-left {
+    transform: translateX(-100%);
+}
+
+header .move-right {
+    transform: translateX(100%);
 }
 
 section {
@@ -138,23 +163,4 @@ footer {
     font-size: 0.9em;
     color: #16003a;
     margin-top: 40px;
-}
-
-/* Animare pentru schimbarea header-ului */
-header .new-header {
-    display: none;
-}
-
-header .new-header.active {
-    display: block;
-    animation: slideIn 1s ease-in-out;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
