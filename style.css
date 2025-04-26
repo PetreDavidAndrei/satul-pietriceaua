@@ -8,7 +8,6 @@ body {
 }
 
 header.banner {
-    background-image: url('banner.jpg'); /* Asigură-te că ai imaginea corespunzătoare aici */
     background-size: cover;
     background-position: center;
     height: 250px;  /* Dimensiunea header-ului originală */
@@ -18,7 +17,9 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: background-image 1s ease-in-out; /* Animație pentru schimbarea imaginii */
 }
+
 
 header.banner::before {
     content: "";
