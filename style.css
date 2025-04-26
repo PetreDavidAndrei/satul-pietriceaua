@@ -17,8 +17,9 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-image 1s ease-in-out, transform 1s ease; /* Animație pentru schimbarea imaginii și glisare */
+    transition: background-image 1s ease-in-out, transform 1s ease;
 }
+
 
 
 
@@ -50,10 +51,11 @@ header .subtitle {
     color: white;
 }
 
+
 header .arrow {
     position: absolute;
     top: 50%;
-    font-size: 5em; /* Săgețile mai mari */
+    font-size: 6em; /* Săgețile mai mari */
     color: white;
     cursor: pointer;
     z-index: 3;
@@ -73,6 +75,9 @@ header .arrow {
     transform: translateY(-50%) scale(1.2); /* Mărire la hover */
 }
 
+header.banner.initial {
+    background-image: url('banner1.jpg'); /* Imaginea care se va arăta la început */
+}
 .container {
     margin: 0 auto;
     max-width: 1200px;
