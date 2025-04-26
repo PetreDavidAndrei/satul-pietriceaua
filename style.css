@@ -1,123 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
-
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
-    color: #16003a;
+    background-color: #f5f5f5;
+    color: #111;
+    font-weight: 400;
 }
 
-header.banner {
-    background-image: url('banner.jpg'); /* Asigură-te că ai imaginea corespunzătoare aici */
-    background-size: cover;
-    background-position: center;
-    height: 250px;  /* Dimensiunea header-ului originală */
+header {
     position: relative;
-    color: white;
+    height: 100vh;
+    background: url('header-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-header.banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay semi-transparent pentru text mai vizibil */
-    z-index: 1;
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
 }
 
-header .header-content {
-    z-index: 2;
-}
-
-header .header-content h1 {
-    font-size: 3em;
-    font-weight: 800;
-    color: white;
+header h1 {
+    font-size: 4rem;
     margin-bottom: 10px;
+    color: #fff;
+    font-weight: 800;
 }
 
-header .subtitle {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: white;
+.subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
 }
 
-section {
+.section {
+    padding: 80px 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+    justify-content: center;
+    text-align: left;
+    background-color: #fff;
 }
 
 .section:nth-child(odd) {
-    flex-direction: row-reverse;
+    background-color: #f0f0f0;
 }
 
-.section .section-title, .section p, .section button {
-    margin: 0 20px; /* Asigură un spațiu între text și margine */
-    max-width: 45%; /* Asigură că textul are o lățime corespunzătoare */
+.content {
+    max-width: 800px;
 }
 
-.section img {
-    max-width: 45%;
-    height: auto;
-    margin: 0 20px;
-}
-
-.section-title {
-    font-size: 2em;
-    font-weight: 800;
+h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #16003a;
-}
-
-.subsection-title {
-    font-size: 1.5em;
-    font-weight: 800;
-    margin-top: 20px;
-    color: #16003a;
+    font-weight: 600;
 }
 
 p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #16003a;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 500;
 }
 
-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800; /* A crescut greutatea fontului pentru buton */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #0066cc;
+    color: #fff;
+    font-weight: 800;
     text-transform: uppercase;
-    background-color: #16003a;
-    color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
-    background-color: #4b1a7a; /* Schimbare mai accentuată la hover */
-    transform: scale(1.05); /* Mărirea butonului la hover */
+.button:hover {
+    background-color: #004999;
 }
 
 footer {
-    background-color: #f5f5f5;
     text-align: center;
     padding: 20px;
-    font-size: 0.9em;
-    color: #16003a;
-    margin-top: 40px;
+    background-color: #111;
+    color: #bbb;
+    font-size: 0.9rem;
 }
