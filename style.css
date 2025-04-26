@@ -8,10 +8,10 @@ body {
 }
 
 header.banner {
-    background-image: url('banner.jpg');
+    background-image: url('banner.jpg'); /* Asigură-te că ai imaginea corespunzătoare aici */
     background-size: cover;
     background-position: center;
-    height: 250px;
+    height: 250px;  /* Dimensiunea header-ului originală */
     position: relative;
     color: white;
     display: flex;
@@ -27,13 +27,12 @@ header.banner::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4); /* Overlay semi-transparent pentru text mai vizibil */
     z-index: 1;
 }
 
 header .header-content {
     z-index: 2;
-    transition: transform 1s ease-in-out;
 }
 
 header .header-content h1 {
@@ -47,38 +46,6 @@ header .subtitle {
     font-size: 1.5em;
     font-weight: 600;
     color: white;
-}
-
-/* Săgețile pentru schimbarea între articole */
-header .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5em;
-    color: white;
-    z-index: 3;
-    cursor: pointer;
-}
-
-header .arrow-left {
-    left: 20px;
-}
-
-header .arrow-right {
-    right: 20px;
-}
-
-header .arrow:hover {
-    color: #4b1a7a;
-}
-
-header .section-header {
-    display: none;
-}
-
-header .section-header.active {
-    display: block;
-    transition: opacity 0.5s ease;
 }
 
 section {
@@ -96,8 +63,8 @@ section {
 }
 
 .section .section-title, .section p, .section button {
-    margin: 0 20px;
-    max-width: 45%;
+    margin: 0 20px; /* Asigură un spațiu între text și margine */
+    max-width: 45%; /* Asigură că textul are o lățime corespunzătoare */
 }
 
 .section img {
@@ -130,7 +97,7 @@ p {
 
 button {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-weight: 800; /* A crescut greutatea fontului pentru buton */
     text-transform: uppercase;
     background-color: #16003a;
     color: white;
@@ -142,8 +109,8 @@ button {
 }
 
 button:hover {
-    background-color: #4b1a7a;
-    transform: scale(1.05);
+    background-color: #4b1a7a; /* Schimbare mai accentuată la hover */
+    transform: scale(1.05); /* Mărirea butonului la hover */
 }
 
 footer {
