@@ -51,7 +51,7 @@ header .subtitle {
 .arrow {
     position: absolute;
     top: 50%;
-    font-size: 2em;
+    font-size: 3em;
     color: white;
     cursor: pointer;
     z-index: 3;
@@ -59,11 +59,11 @@ header .subtitle {
 }
 
 .arrow-left {
-    left: 20px;
+    left: 10px;
 }
 
 .arrow-right {
-    right: 20px;
+    right: 10px;
 }
 
 .container {
