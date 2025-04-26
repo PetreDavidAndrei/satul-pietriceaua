@@ -24,10 +24,6 @@ function moveHeader(direction) {
         currentHeaderIndex = (currentHeaderIndex === headers.length - 1) ? 0 : currentHeaderIndex + 1;
     }
 
-    updateHeader();
-}
-
-function updateHeader() {
     const header = headers[currentHeaderIndex];
     const headerElement = document.querySelector('header.banner .header-content');
     headerElement.querySelector('h1').innerText = header.title;
