@@ -8,12 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="banner">
-    <div class="header-content">
-      <h1>Pietriceaua</h1>
-      <p class="subtitle">Un sat pitoresc în inima comunei Brebu, perfect pentru relaxare și explorare</p>
+<header class="slider">
+  <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+  <div class="slides">
+    <div class="slide active">
+      <h1>Bine ai venit la Pietriceaua</h1>
     </div>
-  </header>
+    <div class="slide">
+      <h1>Descoperă natura pură</h1>
+    </div>
+    <div class="slide">
+      <h1>Tradiții și peisaje unice</h1>
+    </div>
+    <div class="slide">
+      <h1>Locuri de poveste</h1>
+    </div>
+  </div>
+  <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+  <div class="dots">
+    <span onclick="currentSlide(0)" class="dot active"></span>
+    <span onclick="currentSlide(1)" class="dot"></span>
+    <span onclick="currentSlide(2)" class="dot"></span>
+    <span onclick="currentSlide(3)" class="dot"></span>
+  </div>
+</header>
 
   <main class="container">
     <section class="intro">
