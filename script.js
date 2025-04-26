@@ -3,7 +3,7 @@ const headers = [
     {
         title: "Pietriceaua",
         subtitle: "Un sat pitoresc în inima comunei Brebu, perfect pentru relaxare și explorare",
-        image: "banner.jpg",  // Imagine pentru primul header
+        image: "banner1.jpg",  // Imagine pentru primul header
     },
     {
         title: "Despre Satul Pietriceaua",
@@ -18,6 +18,8 @@ const headers = [
 ];
 
 function moveHeader(direction) {
+    const headerElement = document.querySelector('header.banner');
+    
     if (direction === 'left') {
         currentHeaderIndex = (currentHeaderIndex === 0) ? headers.length - 1 : currentHeaderIndex - 1;
     } else if (direction === 'right') {
@@ -25,8 +27,16 @@ function moveHeader(direction) {
     }
 
     const header = headers[currentHeaderIndex];
-    const headerElement = document.querySelector('header.banner .header-content');
-    headerElement.querySelector('h1').innerText = header.title;
-    headerElement.querySelector('.subtitle').innerText = header.subtitle;
-    document.querySelector('header.banner').style.backgroundImage = `url(${header.image})`;
+    const headerContent = headerElement.querySelector('.header-content');
+    headerContent.querySelector('h1').innerText = header.title;
+    headerContent.querySelector('.subtitle').innerText = header.subtitle;
+    
+    // Schimbarea imaginii și adăugarea animației de glisare
+    headerElement.style.backgroundImage = `url(${header.image})`;
+    headerElement.style.transform = 'translateX(-100%)'; // Glisare la stânga
+    
+    setTimeout(() => {
+        headerElement.style.transition = 'transform 1s ease';  // Tranziție pentru glisare
+        headerElement.style.transform = 'translateX(0%)'; // Revine la poziția inițială
+    }, 100);
 }
