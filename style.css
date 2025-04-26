@@ -18,7 +18,6 @@ header.banner {
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Important pentru a menține doar un header vizibil */
 }
 
 header.banner::before {
@@ -34,6 +33,7 @@ header.banner::before {
 
 header .header-content {
     z-index: 2;
+    transition: transform 1s ease-in-out;
 }
 
 header .header-content h1 {
@@ -49,16 +49,15 @@ header .subtitle {
     color: white;
 }
 
+/* Săgețile pentru schimbarea între articole */
 header .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2em;
+    font-size: 2.5em;
     color: white;
-    cursor: pointer;
     z-index: 3;
-    user-select: none;
-    transition: transform 0.3s;
+    cursor: pointer;
 }
 
 header .arrow-left {
@@ -70,25 +69,16 @@ header .arrow-right {
 }
 
 header .arrow:hover {
-    transform: scale(1.2);
+    color: #4b1a7a;
 }
 
-header .secondary-header {
+header .section-header {
     display: none;
-    transition: transform 0.5s ease;
 }
 
-header .active {
+header .section-header.active {
     display: block;
-    transform: translateX(0);
-}
-
-header .move-left {
-    transform: translateX(-100%);
-}
-
-header .move-right {
-    transform: translateX(100%);
+    transition: opacity 0.5s ease;
 }
 
 section {
