@@ -1,182 +1,331 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pietriceaua – Ghid Turistic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #ffffff;
-      color: #16003a;
-    }
-
-    header.banner {
-      background-size: cover;
-      background-position: center;
-      height: 250px;
-      position: relative;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    header.banner::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    header .header-content {
-      z-index: 2;
-    }
-
-    header .header-content h1 {
-      font-size: 3em;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    header .subtitle {
-      font-size: 1.2em;
-      font-weight: 400;
-      color: white;
-    }
-
-    header .arrow {
-      position: absolute;
-      top: 50%;
-      font-size: 2em;
-      color: white;
-      cursor: pointer;
-      z-index: 3;
-      transform: translateY(-50%);
-      transition: transform 0.3s ease;
-    }
-
-    .arrow-left {
-      left: 10px;
-    }
-
-    .arrow-right {
-      right: 10px;
-    }
-
-    .arrow:hover {
-      transform: translateY(-50%) scale(1.2);
-    }
-
-    .header-content {
-      transition: transform 0.8s ease, opacity 0.8s ease;
-      will-change: transform, opacity;
-    }
-
-    header.banner.initial {
-      background-image: url('banner1.jpg');
-    }
-
-    .container {
-      margin: 0 auto;
-      max-width: 1200px;
-      padding: 20px;
-    }
-
-    .section-title {
-      font-size: 2em;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-weight: 800;
-      color: #16003a;
-    }
-
-    button {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      text-transform: uppercase;
-      background-color: #16003a;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    button:hover {
-      background-color: #4b1a7a;
-      transform: scale(1.05);
-    }
-
-    footer {
-      background-color: #f5f5f5;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #16003a;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satul Pietriceaua - Brebu, Prahova</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .header-slide {
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        .header-slide.fade-out {
+            opacity: 0;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4F46E5;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: #4F46E5;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-title:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
 </head>
-<body>
-  <header class="banner initial">
-    <div class="arrow arrow-left" onclick="moveHeader('left')">&#8249;</div>
-    <div class="header-content">
-      <h1>Pietriceaua</h1>
-      <p class="subtitle">Un sat pitoresc în inima comunei Brebu, perfect pentru relaxare și explorare</p>
-    </div>
-    <div class="arrow arrow-right" onclick="moveHeader('right')">&#8250;</div>
-  </header>
+<body class="bg-gray-50">
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-indigo-600">Pietriceaua</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#despre" class="nav-link text-gray-700 hover:text-indigo-600">Despre</a>
+                    <a href="#biserica" class="nav-link text-gray-700 hover:text-indigo-600">Biserica</a>
+                    <a href="#crucea" class="nav-link text-gray-700 hover:text-indigo-600">Crucea Unității</a>
+                    <a href="#cota" class="nav-link text-gray-700 hover:text-indigo-600">Cota</a>
+                    <a href="#barbes" class="nav-link text-gray-700 hover:text-indigo-600">Vârful Barbeș</a>
+                    <a href="#izvor" class="nav-link text-gray-700 hover:text-indigo-600">Izvorul</a>
+                    <a href="#istorie" class="nav-link text-gray-700 hover:text-indigo-600">Istorie</a>
+                    <a href="#transport" class="nav-link text-gray-700 hover:text-indigo-600">Transport</a>
+                </div>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <main class="container">
-    <section class="intro">
-      <h2 class="section-title">Despre Satul Pietriceaua</h2>
-      <p>
-        Pietriceaua este un sat tradițional situat în comuna Brebu, județul Prahova. Aflat la poalele Carpaților de Curbură, în zona subcarpatică a munților Grohotiș, satul este străbătut de pârâul Lupa, care se varsă în râul Doftana. Cu o istorie ce datează din secolul al XIX-lea, Pietriceaua a fost inclus în ghidul oficial al celor mai frumoase așezări rurale din România. Satul este cunoscut pentru peisajele sale spectaculoase, aerul curat și ospitalitatea locuitorilor săi.
-      </p>
-    </section>
+    <!-- Header Slider -->
+    <header class="relative mt-16 h-96 md:h-screen/2 overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="header-slide absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50" style="background-image: url('https://images.unsplash.com/photo-1518631738435-f1466877e7d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Satul Pietriceaua</h1>
+                <p class="text-xl md:text-2xl text-white">Un colț de rai în comuna Brebu, județul Prahova</p>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="header-slide absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden" style="background-image: url('https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Natură și tradiție</h1>
+                <p class="text-xl md:text-2xl text-white">Peisaje spectaculoase și obiceiuri păstrate cu grijă</p>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="header-slide absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Locuri de vizitat</h1>
+                <p class="text-xl md:text-2xl text-white">Descoperă frumusețile ascunse ale Pietriceaua</p>
+            </div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button id="prev-slide" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition">
+            <i class="fas fa-chevron-left text-xl"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition">
+            <i class="fas fa-chevron-right text-xl"></i>
+        </button>
+    </header>
 
-    <section class="church">
-      <h2 class="section-title">Biserica „Sfânta Treime”</h2>
-      <p>
-        Biserica „Sfânta Treime” din Pietriceaua este un lăcaș de cult important pentru comunitatea locală. Construită în 1852 din piatră, biserica reflectă arhitectura tradițională a regiunii. Aflată într-o zonă liniștită, departe de agitația cotidiană, biserica este locul ideal pentru momente de rugăciune și reflecție. De asemenea, este un punct de atracție pentru vizitatori datorită frumuseții sale și a istoricului său îndelungat.
-      </p>
-      <button onclick="window.open('https://www.google.com/maps?q=Biserica+Sfanta+Treime+Pietriceaua', '_blank')">VIZUALIZARE</button>
-    </section>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- About Section -->
+        <section id="despre" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Despre Satul Pietriceaua</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-700 mb-4">Pietriceaua este un sat tradițional, situat în comuna Brebu, jundețul Prahova. Este un loc liniștit, unde natura și tradițiile se îmbină armonios.</p>
+                    <p class="text-gray-700 mb-4">Cu peisaje spectaculoase și aer curat, Pietriceaua oferă vizitatorilor un loc ideal pentru relaxare, drumeții și explorare.</p>
+                    <p class="text-gray-700">Satul este cunoscut și pentru ospitalitatea locuitorilor săi și pentru păstrarea unor obiceiuri vechi, care reflectă viața simplă de altădată.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Peisaj din Pietriceaua" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
 
-    <section class="spring">
-      <h2 class="section-title">Izvorul Tămăduirii</h2>
-      <p>
-        Izvorul Tămăduirii este un loc important pentru locuitorii satului Pietriceaua, fiind un loc de rugăciune pentru mulți credincioși. Conform tradiției, apa acestui izvor este considerată tămăduitoare, având puterea de a vindeca bolile și de a alunga spiritele rele. În fiecare an, în prima vineri după Paști, este celebrată o sărbătoare ortodoxă dedicată acestui izvor, în cadrul căreia credincioșii vin să se roage și să se spele cu apa considerată sfințită.
-      </p>
-    </section>
+        <!-- Church Section -->
+        <section id="biserica" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Biserica Satului Pietriceaua</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <p class="text-gray-700 mb-4">Biserica „Sfânta Treime” din Pietriceaua este un lăcaș de cult de o importanță deosebită pentru comunitatea locală.</p>
+                    <p class="text-gray-700 mb-4">Construită din piatră, cu o arhitectură tradițională, biserica reflectă stilul specific regiunii.</p>
+                    <p class="text-gray-700 mb-6">Lăcașul de cult se află într-o zonă liniștită, departe de agitația cotidiană, fiind locul ideal pentru momente de rugăciune și reflecție.</p>
+                    <a href="https://www.google.com/maps?q=Biserica+Sfanta+Treime+Pietriceaua" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Vezi pe hartă
+                    </a>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Biserica Sfânta Treime" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="barbes">
-      <h2 class="section-title">Vârful Barbeș</h2>
-      <p>
-        Vârful Barbeș este cel mai înalt punct din satul Pietriceaua, având o altitudine de 1050 de metri. Situat în zona montană, acest vârf oferă o vedere panoramică deosebită asupra regiunii. Este un loc preferat de iubitorii de drumeție și explorare montană, oferind oportunități excelente pentru fotografii și relaxare în mijlocul naturii.
-      </p>
-    </section>
+        <!-- Unity Cross Section -->
+        <section id="crucea" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Crucea Unității</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1517825738774-7de9363ef735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Crucea Unității" class="w-full h-auto">
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 mb-4">Crucea Unității este un monument de mare importanță simbolică, situat la granița dintre satul Pietriceaua și localitatea Aluniș.</p>
+                    <p class="text-gray-700 mb-4">Această cruce, ce leagă cele două localități, este un simbol al unității și al comunității.</p>
+                    <p class="text-gray-700 mb-6">Ea a fost ridicată pentru a comemora evenimente istorice importante și este un punct de atracție turistică, cu o priveliște deosebită asupra regiunii.</p>
+                    <a href="https://www.google.com/maps?q=Crucea+Unitatii+Alunis" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Vezi pe hartă
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <section class="cota">
-      <h2 class="section-title">Belvederea Cota</h2>
-      <p>
-        Belvederea Cota este un punct de observație ce oferă o panoramă impresionantă asupra orașului Câmpina și a regiunii înconjurătoare. Zona este frecventată de iubitorii de natură și drumeție, fiind un loc ideal pentru relaxare și capturarea unor imagini spectaculoase. De asemenea, Cota este un loc popular pentru iubitorii de peisaje.
-      </p>
-      <button onclick="window.open('https://www.google.com/maps?q=45.216113,25.796941', '_blank')">VIZUALIZARE</button>
-    </section>
-  </main>
+        <!-- Cota Section -->
+        <section id="cota" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Cota</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-700 mb-4">Cota este un loc de observație situat în apropierea satului Pietriceaua, cunoscut pentru vederile panoramice asupra regiunii.</p>
+                    <p class="text-gray-700 mb-6">Este un loc de relaxare și de explorare pentru iubitorii de natură și drumeție.</p>
+                    <a href="https://www.google.com/maps?q=45.216113,25.796941" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Vezi pe hartă
+                    </a>
+                </div>
+                <div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Cota" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Pietriceaua – Ghid Turistic. Toate drepturile rezervate.</p>
-  </footer>
+        <!-- Barbes Peak Section -->
+        <section id="barbes" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Vârful Barbeș</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <p class="text-gray-700 mb-4">Vârful Barbeș este un vârf situat în zona Pietriceaua. Cu o altitudine de aproximativ 1050 de metri, acest vârf oferă o vedere panoramică deosebită asupra regiunii.</p>
+                    <p class="text-gray-700">Este un loc preferat de iubitorii de drumeție și explorare montană, dar nu este întotdeauna accesibil tuturor.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Vârful Barbeș" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healing Spring Section -->
+        <section id="izvor" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Izvorul Tămăduirii</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1509233631037-deb7efd36207?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Izvorul Tămăduirii" class="w-full h-auto">
+                    </div>
+                </div>
+                <div>
+                    <p class="text-gray-700 mb-4">Izvorul Tămăduirii este un loc important pentru locuitorii satului Pietriceaua, fiind un loc de rugăciune pentru mulți credincioși.</p>
+                    <p class="text-gray-700">Conform tradiției, apă acestui izvor este considerată tămăduitoare, având puterea de a vindeca bolile și de a alunga spiritele rele.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="istorie" class="mb-20 scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Istoria Satului Pietriceaua</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700 mb-4">Pietriceaua este un sat tradițional din comuna Brebu, județul Prahova, România. Acesta a fost locuit de-a lungul secolelor, păstrându-și o mare parte din obiceiurile și tradițiile vechi.</p>
+                <p class="text-gray-700 mb-4">Istoria sa se leagă de dezvoltarea zonei de munte, fiind o așezare care a contribuit la evoluția comunității din jurul orașului Câmpina.</p>
+                <p class="text-gray-700">În trecut, satul era cunoscut pentru agricultura sa de subzistență și pentru meșteșugurile tradiționale.</p>
+            </div>
+        </section>
+
+        <!-- Transport Section -->
+        <section id="transport" class="scroll-mt-20">
+            <h2 class="section-title text-3xl font-bold text-gray-800 mb-6">Transport</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700 mb-4">Satul Pietriceaua este accesibil prin drumul județean care leagă Câmpina de Brebu.</p>
+                <p class="text-gray-700 mb-4">Cel mai apropiat oraș mare este Câmpina, de unde se poate ajunge cu mașina pe drumul județean DJ100.</p>
+                <p class="text-gray-700">De asemenea, există autobuze și microbuze care fac legătura cu localitățile din jur, deși transportul public în zonă nu este foarte frecvent.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold mb-4">Satul Pietriceaua</h3>
+                <p class="text-gray-400">Comuna Brebu, Județul Prahova, România</p>
+                <p class="text-gray-400 mt-2">© 2023 Toate drepturile rezervate</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.header-slide');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            let currentSlide = 0;
+            
+            // Show first slide
+            slides[currentSlide].classList.remove('hidden');
+            
+            function showSlide(index) {
+                // Fade out current slide
+                slides[currentSlide].classList.add('fade-out');
+                
+                setTimeout(() => {
+                    // Hide all slides
+                    slides.forEach(slide => {
+                        slide.classList.add('hidden');
+                        slide.classList.remove('fade-out');
+                    });
+                    
+                    // Show new slide
+                    slides[index].classList.remove('hidden');
+                    currentSlide = index;
+                }, 800);
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                let newIndex = currentSlide - 1;
+                if (newIndex < 0) {
+                    newIndex = slides.length - 1;
+                }
+                showSlide(newIndex);
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                let newIndex = currentSlide + 1;
+                if (newIndex >= slides.length) {
+                    newIndex = 0;
+                }
+                showSlide(newIndex);
+            });
+            
+            // Auto slide change every 5 seconds
+            setInterval(() => {
+                let newIndex = currentSlide + 1;
+                if (newIndex >= slides.length) {
+                    newIndex = 0;
+                }
+                showSlide(newIndex);
+            }, 5000);
+            
+            // Mobile menu toggle (if needed)
+            const mobileMenuBtn = document.querySelector('.md\\:hidden');
+            const navLinks = document.querySelector('.md\\:flex');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
