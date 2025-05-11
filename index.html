@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pietriceaua – Ghid Turistic</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
   <style>
@@ -12,7 +12,6 @@
       background-color: #ffffff;
       color: #16003a;
     }
-
     header.banner {
       background-size: cover;
       background-position: center;
@@ -25,7 +24,6 @@
       text-align: center;
       overflow: hidden;
     }
-
     header.banner::before {
       content: "";
       position: absolute;
@@ -36,70 +34,59 @@
       background: rgba(0, 0, 0, 0.4);
       z-index: 1;
     }
-
     header .header-content {
       z-index: 2;
     }
-
     header .header-content h1 {
       font-size: 3em;
       font-weight: 800;
       color: white;
       margin-bottom: 10px;
     }
-
     header .subtitle {
       font-size: 1.2em;
       font-weight: 400;
       color: white;
     }
-
     header .arrow {
       position: absolute;
       top: 50%;
-      font-size: 2em;
+      font-size: 6em;
       color: white;
       cursor: pointer;
       z-index: 3;
       transform: translateY(-50%);
       transition: transform 0.3s ease;
     }
-
     .arrow-left {
       left: 10px;
     }
-
     .arrow-right {
       right: 10px;
     }
-
     .arrow:hover {
       transform: translateY(-50%) scale(1.2);
     }
-
     .header-content {
       transition: transform 0.8s ease, opacity 0.8s ease;
       will-change: transform, opacity;
     }
-
     header.banner.initial {
       background-image: url('banner1.jpg');
     }
-
     .container {
       margin: 0 auto;
       max-width: 1200px;
       padding: 20px;
     }
-
+    section {
+      margin-bottom: 40px;
+    }
     .section-title {
       font-size: 2em;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-weight: 800;
+      margin-bottom: 10px;
       color: #16003a;
     }
-
     button {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
@@ -112,12 +99,10 @@
       cursor: pointer;
       transition: background-color 0.3s, transform 0.3s;
     }
-
     button:hover {
       background-color: #4b1a7a;
       transform: scale(1.05);
     }
-
     footer {
       background-color: #f5f5f5;
       text-align: center;
@@ -129,54 +114,66 @@
   </style>
 </head>
 <body>
-  <header class="banner initial">
-    <div class="arrow arrow-left" onclick="moveHeader('left')">&#8249;</div>
+  <header class="banner">
+    <div class="arrow arrow-left" onclick="moveHeader('left')">&lt;</div>
     <div class="header-content">
       <h1>Pietriceaua</h1>
       <p class="subtitle">Un sat pitoresc în inima comunei Brebu, perfect pentru relaxare și explorare</p>
     </div>
-    <div class="arrow arrow-right" onclick="moveHeader('right')">&#8250;</div>
+    <div class="arrow arrow-right" onclick="moveHeader('right')">&gt;</div>
   </header>
 
   <main class="container">
     <section class="intro">
       <h2 class="section-title">Despre Satul Pietriceaua</h2>
       <p>
-        Pietriceaua este un sat tradițional situat în comuna Brebu, județul Prahova. Aflat la poalele Carpaților de Curbură, în zona subcarpatică a munților Grohotiș, satul este străbătut de pârâul Lupa, care se varsă în râul Doftana. Cu o istorie ce datează din secolul al XIX-lea, Pietriceaua a fost inclus în ghidul oficial al celor mai frumoase așezări rurale din România. Satul este cunoscut pentru peisajele sale spectaculoase, aerul curat și ospitalitatea locuitorilor săi.
+        Pietriceaua este un sat tradițional, situat în comuna Brebu, județul Prahova. Este un loc liniștit, unde natura și tradițiile se îmbină armonios. Cu peisaje spectaculoase și aer curat, Pietriceaua oferă vizitatorilor un loc ideal pentru relaxare, drumeții și explorare. Satul este cunoscut și pentru ospitalitatea locuitorilor săi și pentru păstrarea unor obiceiuri vechi, care reflectă viața simplă de altădată.
       </p>
     </section>
 
     <section class="church">
       <h2 class="section-title">Biserica „Sfânta Treime”</h2>
       <p>
-        Biserica „Sfânta Treime” din Pietriceaua este un lăcaș de cult important pentru comunitatea locală. Construită în 1852 din piatră, biserica reflectă arhitectura tradițională a regiunii. Aflată într-o zonă liniștită, departe de agitația cotidiană, biserica este locul ideal pentru momente de rugăciune și reflecție. De asemenea, este un punct de atracție pentru vizitatori datorită frumuseții sale și a istoricului său îndelungat.
+        Biserica „Sfânta Treime” din Pietriceaua este un lăcaș de cult de o importanță deosebită pentru comunitatea locală. Construită între anii 1948 și 1951 din inițiativa preotului Gheorghe Popescu și cu sprijinul credincioșilor, biserica reflectă stilul arhitectural tradițional al regiunii. Este un loc de reculegere și spiritualitate, situat într-un cadru natural deosebit.
       </p>
       <button onclick="window.open('https://www.google.com/maps?q=Biserica+Sfanta+Treime+Pietriceaua', '_blank')">VIZUALIZARE</button>
     </section>
 
-    <section class="spring">
-      <h2 class="section-title">Izvorul Tămăduirii</h2>
+    <section class="cross">
+      <h2 class="section-title">Crucea Unității</h2>
       <p>
-        Izvorul Tămăduirii este un loc important pentru locuitorii satului Pietriceaua, fiind un loc de rugăciune pentru mulți credincioși. Conform tradiției, apa acestui izvor este considerată tămăduitoare, având puterea de a vindeca bolile și de a alunga spiritele rele. În fiecare an, în prima vineri după Paști, este celebrată o sărbătoare ortodoxă dedicată acestui izvor, în cadrul căreia credincioșii vin să se roage și să se spele cu apa considerată sfințită.
+        Crucea Unității este un monument simbolic situat la granița dintre satul Pietriceaua și localitatea Aluniș. Ridicată pentru a comemora evenimente istorice importante, crucea oferă o priveliște panoramică asupra regiunii și este un punct de atracție pentru turiști și localnici deopotrivă.
       </p>
-    </section>
-
-    <section class="barbes">
-      <h2 class="section-title">Vârful Barbeș</h2>
-      <p>
-        Vârful Barbeș este cel mai înalt punct din satul Pietriceaua, având o altitudine de 1050 de metri. Situat în zona montană, acest vârf oferă o vedere panoramică deosebită asupra regiunii. Este un loc preferat de iubitorii de drumeție și explorare montană, oferind oportunități excelente pentru fotografii și relaxare în mijlocul naturii.
-      </p>
+      <button onclick="window.open('https://www.google.com/maps?q=Crucea+Unitatii+Alunis', '_blank')">VIZUALIZARE</button>
     </section>
 
     <section class="cota">
       <h2 class="section-title">Belvederea Cota</h2>
       <p>
-        Belvederea Cota este un punct de observație ce oferă o panoramă impresionantă asupra orașului Câmpina și a regiunii înconjurătoare. Zona este frecventată de iubitorii de natură și drumeție, fiind un loc ideal pentru relaxare și capturarea unor imagini spectaculoase. De asemenea, Cota este un loc popular pentru iubitorii de peisaje.
+        Belvederea Cota este un punct de observație ce oferă o panoramă impresionantă asupra orașului Câmpina și a regiunii înconjurătoare. Este un loc frecventat de iubitorii de natură și drumeții, oferind oportunități excelente pentru fotografie și relaxare în aer liber.
       </p>
       <button onclick="window.open('https://www.google.com/maps?q=45.216113,25.796941', '_blank')">VIZUALIZARE</button>
+    </section>
+
+    <section class="barbes">
+      <h2 class="section-title">Vârful Barbeș</h2>
+      <p>
+        Vârful Barbeș, cu o altitudine de aproximativ 1050 de metri, este cel mai înalt punct din zona Pietriceaua. Aflat la granița cu comuna Valea Doftanei, acest vârf oferă o vedere panoramică spectaculoasă și este un loc preferat de pasionații de drumeții montane.
+      </p>
+    </section>
+
+    <section class="spring">
+      <h2 class="section-title">Izvorul Tămăduirii</h2>
+      <p>
+        Izvorul Tămăduirii este un loc cu semnificație spirituală profundă pentru locuitorii satului Pietriceaua. Conform tradiției, apa acestui izvor este considerată tămăduitoare. În fiecare an, în prima vineri după Paști, este celebrată o sărbătoare ortodoxă dedicată acestui izvor, atrăgând credincioși din întreaga regiune.
+      </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Pietriceaua – Ghid Turistic. Toate drepturile rezervate.</p>
   </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
